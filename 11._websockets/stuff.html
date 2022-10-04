@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ws = new WebSocket("ws://2.tcp.eu.ngrok.io:19498");
+
+      ws.onopen = () => {
+        console.log("connected");
+        ws.send("Hello from client");
+      };
+      ws.onmessage = function message(data) {
+        console.log(`Received message`, data.data);
+      };
+    </script>
+  </body>
+</html>

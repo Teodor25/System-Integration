@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "data-format-translations-service"
+version = "0.0.1"
+description = ""
+authors = ["Teodor_Jonasson <teodor_jonasson@hotmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "data_format_translations_service"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.82.0"
+uvicorn = {extras = ["standard"], version = "^0.18.3"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
